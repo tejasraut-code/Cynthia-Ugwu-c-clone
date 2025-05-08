@@ -1,5 +1,5 @@
 const scroll = new LocomotiveScroll({
-    el: document.querySelector('#main'),
+    el: document.querySelector('[data-scroll-container]'),
     smooth: true
 });
 
@@ -41,7 +41,8 @@ function circleChaptaKaro(){
 
     var xprev = 0;
     var yprev = 0;
-
+    var timeout;
+    
     window.addEventListener("mousemove",function(dets){
 
         clearTimeout(timeout);

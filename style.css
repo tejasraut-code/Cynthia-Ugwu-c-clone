@@ -173,7 +173,7 @@ html,body{
     opacity: .7;
 }
 
-.elem elemlast{
+.elem.elemlast{
     border-bottom: 1px solid grey;
 }
 
@@ -224,7 +224,7 @@ html,body{
 }
 
 @keyframes slide{
-    form{
+    from{
         transform:  translateX(0);
     }
     to{
