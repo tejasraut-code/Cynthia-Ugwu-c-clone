@@ -1,17 +1,30 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family:"General Sans";
+    font-family: "General Sans";
 }
 
-html,body{
+*::selection {
+    background-color: white;
+    color: black;
+}
+
+
+html,
+body {
     height: 100%;
     width: 100%;
-    /* overflow: hidden; */
 }
 
-#minicircle{
+
+@font-face {
+    font-family: "General Sans Medium";
+    src: url(./GeneralSans-Medium.woff2);
+}
+
+
+#minicircle {
     transition: all cubic-bezier(0.19, 1, 0.22, 1)1s;
     width: 10px;
     height: 10px;
@@ -21,115 +34,122 @@ html,body{
     border-radius: 50%;
 }
 
-.bounding{
-    width: fit-content;
-    overflow: hidden;
-    /* background-color: red; */
+
+#main {
+    background-color: rgb(0, 0, 0);
 }
 
-.bounding .boundingelem{ 
-    transform: translateY(100%);
-}
-
-#main{
-    background-color: black;
-    width: 100%;
-}
-
-#hero{
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    background-color: black;
-    color: white;
-}
-
-#nav{
+#nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    padding:30px 40px ;
+    padding: 2vw 3vw;
     color: white;
 }
 
-#nav a{
+#nav a {
     text-decoration: none;
     font-size: 18px;
     color: white;
 }
 
-#heading{
-    margin-top:45px;
+#hero {
+    position: relative;
+    width: 100%;
+    height: 90vh;
+    padding: 1vw 3vw;
+    background-color: black;
+    color: white;
 }
 
-#heading h1{
-    margin-left: 30px;
+#heading {
+    background-color: black;
+    height: 45vh;
+}
+
+.bounding {
+    width: fit-content;
+    overflow: hidden;
+}
+
+.bounding .boundingelem {
+    transform: translateY(100%);
+}
+
+#heading h1 {
     opacity: .6;
-    font-size:10vw;
+    font-size: 10vw;
     text-transform: uppercase;
     font-family: "General Sans Medium";
     line-height: .9;
     font-weight: 900;
 }
 
-#heading #secondh1{
+#heading #second2 {
+    font-size: 1.5vw;
+}
+
+#heading #second1 {
     margin-left: 170px;
 }
 
-.blocktext{
-    /* background-color: red; */
+.blocktext {
     display: flex;
     flex-direction: column;
     align-items: end;
     width: fit-content;
 }
 
-.blocktext h5{
+.blocktext h5 {
     text-align: right;
     text-transform: uppercase;
     font-size: 2vw;
     margin-top: 1vw;
 }
 
-#otherheading{
+#otherheading {
     display: flex;
     flex-direction: column;
     align-items: end;
-    margin-top: 100px;
-    padding-right: 30px;
+    justify-content: flex-end;
+    background-color: black;
+    height: 15vw;
 }
 
-#otherheading h5{
+#otherheading h5 {
     text-align: right;
     text-transform: uppercase;
-    margin-top: .6vw;
+    /* margin-top: .6vw;     */
+    line-height: 2vw;
+    word-spacing: 0.2vw;
     font-size: 1.2vw;
 }
 
-#herofooter{
+#herofooter {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 2vw;
+    padding-right: 0 2vw;
     position: absolute;
-    width: 100%;
+    height: 10vh;
+    width: 95vw;
     bottom: 3%;
-    /* margin-top: 20px; */
+    margin-right: 5vw;
 }
 
-#herofooter a{
+#herofooter a {
     color: white;
     text-transform: uppercase;
     text-decoration: none;
 }
 
-#herofooter #iconset{
+#herofooter #iconset {
     display: flex;
     gap: 5px;
 }
 
-#herofooter .circle{
+#herofooter .circle {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -142,21 +162,20 @@ html,body{
 }
 
 
-#second{
-    padding-top: 150px;
-    padding-right: 10vw;
+#second {
+    padding: 5vw 3vw;
+    margin-top: 5vw;
     width: 100%;
-    height: 230vh;
-    /* background: #000; */
+    min-height: 100vh;
     background-color: black;
     color: rgba(255, 255, 255, 0.662);
 }
 
-.elem h4{
+.elem h4 {
     color: white;
 }
 
-.elem{
+.elem {
     position: relative;
     width: 100%;
     padding: 3.5vw 2vw;
@@ -167,27 +186,27 @@ html,body{
     justify-content: space-between;
 }
 
-.elem h1{
+.elem h1 {
     text-transform: uppercase;
     font-size: 7vw;
     opacity: .7;
 }
 
-.elem.elemlast{
+.elem.elemlast {
     border-bottom: 1px solid grey;
 }
 
-.elem img{
+.elem img {
     height: 150%;
     pointer-events: none;
     /* display: none; */
     opacity: 0;
-    position: absolute;   
+    position: absolute;
     z-index: 9999;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
 }
 
-#view-all{
+#view-all {
     margin-top: 100px;
     margin-left: 50px;
     display: flex;
@@ -196,15 +215,15 @@ html,body{
     width: 10vw;
     height: 3vw;
     padding: 10px 10px;
-    border: 1px solid white;
+    border: 2px solid white;
     border-radius: 100px;
 }
 
-#view-all sup{
-    color: rgba(255, 255, 255, 0.317) ;
+#view-all sup {
+    opacity: 0.7;
 }
 
-.logo{
+.logo {
     border-top: 1px solid white;
     border-bottom: 1px solid white;
     padding: 4vw 0px;
@@ -212,27 +231,28 @@ html,body{
     white-space: nowrap;
 }
 
-.logos-slide{
+.logos-slide {
     display: inline-block;
     animation: 40s slide infinite linear;
 }
 
-.logos-slide img{
+.logos-slide img {
     height: 70px;
-    margin:  0  5vw;
+    margin: 0 5vw;
     /* width: 100px; */
 }
 
-@keyframes slide{
-    from{
-        transform:  translateX(0);
+@keyframes slide {
+    from {
+        transform: translateX(0);
     }
-    to{
+
+    to {
         transform: translateX(-100%);
     }
 }
 
-#about{
+#about {
     padding: 10vw 10vw;
     width: 100%;
     background-color: black;
@@ -244,30 +264,31 @@ html,body{
     gap: 50px;
 }
 
-#textabout a{
+#textabout a {
     text-decoration: none;
     color: white;
     width: 25rem;
 }
 
-#textabout h5{
+#textabout h5 {
     text-transform: uppercase;
     opacity: .6;
     margin-bottom: 10px;
 }
 
-#textabout p{
+#textabout p {
     line-height: 1.7;
     margin-bottom: 30px;
+    word-spacing: 0.2vw;
 }
 
-#about img{
+#about img {
     width: 200px;
     height: 200px;
     border-radius: 50%;
 }
 
-#textabout a{
+#textabout a {
     padding: 10px 18px;
     border: 1px solid white;
     border-radius: 100px;
@@ -276,50 +297,470 @@ html,body{
     text-decoration: none;
 }
 
-#subscribe{
+#subscribe {
     background-color: black;
     color: white;
     padding: 20px 40px;
     padding-bottom: 3vw;
 }
 
-#subscribe h5{
+#subscribe h5 {
     text-transform: uppercase;
     opacity: .6;
 }
 
-#subscribe h3{
+#subscribe h3 {
     text-transform: uppercase;
     font-size: 14px;
     margin-top: 10px;
 }
 
-#footer{
-    /* width: 100%;  */
-    /* height: 100%; */
+#footer {
+    height: 10vh;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 20px 30px;
+    padding: 3vw;
     background-color: black;
     color: white;
-
+    font-size: 1.3vw;
 }
 
-#footerleft{
+#footerleft {
     display: flex;
-    gap: 20px;
+    gap: 3vw;
 }
 
-#footerright{
+#footerright {
     display: flex;
-    gap: 30px;
+    gap: 3vw;
+    font-weight: 100;
 }
 
-#footer a{
+#footer a {
     text-decoration: none;
     color: white;
     text-transform: uppercase;
-    font-size: 14px;
     font-weight: 500;
+}
+
+
+
+
+
+
+/* Responsive*/
+/* ---------------------------------------------------------------------------------------------------------- */
+/* 1100px */
+
+@media(max-width:1100px) {
+
+    #nav {
+        width: 100%;
+        /* height: 5vh; */
+        padding: 5vw 3vw;
+    }
+
+    #hero {
+        width: 100%;
+        height: 95vh;
+        padding: 3vw;
+    }
+
+    #heading {
+        height: 40vh;
+    }
+
+    #heading h1 {
+        opacity: .6;
+        font-size: 10vw;
+        padding: 0vw 1vw;
+        line-height: 1;
+        font-weight: 700;
+    }
+
+    #heading #second2 {
+        font-size: 1.5vw;
+    }
+
+    #heading #second1 {
+        margin-left: 170px;
+    }
+
+    .blocktext {
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        width: fit-content;
+    }
+
+    .blocktext h5 {
+        text-align: right;
+        text-transform: uppercase;
+        font-size: 2vw;
+        margin-top: 1vw;
+    }
+
+    #otherheading {
+        height: 50vh;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        justify-content: flex-end;
+        background-color: black;
+        height: 15vw;
+    }
+
+    #otherheading h5 {
+        line-height: 2vw;
+        word-spacing: 1vw;
+        font-size: 1.5vw;
+        font-weight: 100;
+    }
+
+    #herofooter {
+        padding-right: 0vw 2vw;
+        height: 10vh;
+        width: 95vw;
+        bottom: 3%;
+        margin-right: 0vw;
+    }
+
+
+    #herofooter i {
+        padding: 2vw;
+        font-size: 2vw;
+    }
+
+    #second {
+        padding: 3vw 3vw;
+        margin-top: 10vw;
+        margin-bottom: -5vw;
+        width: 100%;
+        height: 70vh;
+        background-color: black;
+        color: rgba(255, 255, 255, 0.662);
+    }
+
+    #view-all {
+        margin-top: 4vw;
+        margin-left: 0px;
+        width: 15vw;
+        height: 2vw;
+        padding: 2vw;
+    }
+
+
+    .logo {
+        border-top: 2px solid white;
+        border-bottom: 2px solid white;
+        padding: 3vw 2vw;
+    }
+
+    .logos-slide img {
+        height: 8vw;
+        margin: 0vw 3vw;
+    }
+
+    #about {
+        padding: 3vw 10vw;
+        height: 70vh;
+        width: 100%;
+    }
+
+    #textabout a {
+        color: white;
+        width: 25rem;
+    }
+
+    #textabout a {
+        padding: 10px 30px;
+        border: 1px solid white;
+        border-radius: 100px;
+        color: white;
+        font-size: 16px;
+    }
+
+    #textabout h5 {
+        font-size: 1.5vw;
+    }
+
+    #textabout p {
+        word-spacing: 0.2vw;
+        font-size: 2vw;
+    }
+
+    #about img {
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+    }
+
+
+    #subscribe {
+        padding: 3vw;
+
+    }
+
+    #subscribe h5 {
+        text-transform: uppercase;
+        opacity: .6;
+        font-size: 2vw;
+    }
+
+    #subscribe h3 {
+        text-transform: uppercase;
+        font-size: 2.2vw;
+        margin-top: 1vw;
+    }
+
+    #footer {
+        height: 10vh;
+        width: 100%;
+        padding: 3vw;
+        font-size: 2vw;
+        letter-spacing: 0.2vw;
+        font-weight: 100;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+/* Responsis */
+/* --------------------------------------------------------------------------------------------------------------- */
+/* 600px */
+
+@media(max-width:600px) {
+
+
+    #nav {
+        font-size: 3.5vw;
+    }
+
+
+    #hero {
+        width: 100%;
+        height: 90vh;
+        padding: 15w 3vw;
+        overflow: hidden;
+    }
+
+    #heading {
+        height: 45vh;
+        width: 100%;
+        overflow: hidden;
+    }
+
+
+    #heading h1 {
+        font-size: 15vw;
+        line-height: 1;
+    }
+
+    #heading #second2 {
+        font-size: 3vw;
+    }
+
+    #heading #second1 {
+        margin-left: 15vw;
+    }
+
+    .blocktext {
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        width: fit-content;
+    }
+
+    .blocktext h5 {
+        margin-top: 1vw;
+    }
+
+    #otherheading {
+        height: 20vw;
+    }
+
+    #otherheading h5 {
+        margin-top: .6vw;
+        line-height: 3vw;
+        word-spacing: 1vw;
+        font-size: 2.5vw;
+    }
+
+    #herofooter {
+        padding-right: 1vw 3vw;
+        height: 20vh;
+    }
+
+    #herofooter {
+        align-items: end;
+        font-size: 3vw;
+        word-spacing: 0.5vw;
+        padding: 3vw;
+    }
+
+    #herofooter i {
+        font-size: 3.5vw;
+    }
+
+    #herofooter #iconset {
+        display: none;
+    }
+
+    #second {
+        padding: 10vw 3vw;
+        margin-top: 0vw;
+        margin-bottom: 0vw;
+        width: 100%;
+        height: 70%;
+    }
+
+    .elem h4 {
+        font-size: 2.5vw;
+    }
+
+    .elem {
+        position: relative;
+        width: 100%;
+        padding: 5vw 0vw;
+    }
+
+    .elem h1 {
+        font-size: 10vw;
+        opacity: .7;
+    }
+
+    .elem img {
+        height: 200%;
+    }
+
+    #view-all {
+        margin-top: 10vw;
+        margin-left: 0px;
+        width: 35vw;
+        height: 8vw;
+        padding: 1vw;
+        border: 1px solid white;
+        font-size: 3vw;
+    }
+
+    .logo {
+        padding: 5vw 1px;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+
+    .logos-slide img {
+        height: 100px;
+        margin: 0 5vw;
+    }
+
+    #about {
+        margin: 5vw;
+        padding: 10vw;
+        height: 90vh;
+        width: 90%;
+        padding-left: 0vw;
+        display: block;
+        gap: 0px;
+        overflow: hidden;
+    }
+
+    #textabout {
+        margin: 5vw;
+    }
+
+    #textabout a {
+        text-decoration: none;
+        color: white;
+        width: 10vw;
+    }
+
+    #textabout a {
+        padding: 2vw;
+        height: 8vw;
+        width: 30vw;
+        border: 1px solid white;
+        font-size: 2vw;
+        opacity: 0.7;
+        text-decoration: none;
+    }
+
+    #textabout h5 {
+        opacity: .6;
+        margin-bottom: 5vw;
+        font-size: 3vw;
+        word-spacing: 1vw;
+    }
+
+    #textabout p {
+        line-height: 1.7;
+        margin-bottom:5vw;
+        word-spacing: 1vw;
+        font-size: 3.5vw;
+    }
+
+    #about img {
+        width: 150px;
+        height: 150px;
+        margin: 5vw;
+    }
+
+    
+    #subscribe {
+        padding:5vw;
+        padding-bottom: 0vw;
+    }
+
+    #subscribe h5 {
+        font-size: 3vw;
+        opacity: .6;
+    }
+
+    #subscribe h3 {
+        font-size: 3.5vw;
+        margin-top: 1px;
+    }
+
+    #footer {
+        height: 10vh;
+        margin-top: 10vh;
+        width: 100%;
+        padding: 3vw;
+        display: block;
+        align-items:center;
+        justify-content: space-between;
+        
+        font-size: 4vw;
+        line-height: 5vw;
+        overflow: hidden;
+    }
+
+    #footerleft {
+        display: flex;
+        gap: 3vw;
+        padding: 2vw;
+    }
+
+    #footerright {
+        display: block;
+        gap: 3vw;
+        font-weight: 100;
+        
+    }
+
+    #footer a {
+        padding: 2vw;
+    }
+
+
+
 }

@@ -1,7 +1,7 @@
 const scroll = new LocomotiveScroll({
     el: document.querySelector('[data-scroll-container]'),
     smooth: true
-});
+});  
 
 
 function firstPageAnim(){
@@ -31,6 +31,7 @@ function firstPageAnim(){
         // stagger: .2, 
     })
 }
+firstPageAnim();
 
 var timeout;
 
@@ -72,10 +73,10 @@ function circleMouseFollower(xscale, yscale) {
     })
 }
 circleMouseFollower();
-firstPageAnim();
 
 
-document.querySelectorAll(".elem").forEach(function(elem) {
+function imgrotate(){
+    document.querySelectorAll(".elem").forEach(function(elem) {
     var rotate = 0;
     var diffrot =  0;
 
@@ -105,3 +106,5 @@ document.querySelectorAll(".elem").forEach(function(elem) {
         // console.log("hello ji")
     });
 });
+}
+imgrotate()

@@ -1,7 +1,8 @@
 🚀 Project: Cynthia Ugwu's Website Clone: Frontend Webpage Development - UI 
 
 🔗 Live Demo : https://tejasraut-code.github.io/Cynthia-Ugwu-c-clone/
-📹 LinkedIn: www.linkedin.com/in/tejas-raut-code
+📂 GitHub: tejasraut-code
+📂 LinkedIn: linkedin.com/in/tejas-raut-code
 
 This project is a clone of Cynthia Ugwu’s creative portfolio website, built using HTML, CSS, and JavaScript, with animations powered by GSAP (GreenSock Animation Platform) and Locomotive Scroll for smooth scrolling effects.
 
